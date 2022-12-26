@@ -4,27 +4,208 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task List 2022</title>
+    <title>30 day routine</title>
     <link rel="stylesheet" href="main.css" />
   </head>
 
   <body>
     <header>
-      <h1>Task List 2021</h1>
-      <form id="new-task-form">
+      <h1>30 day routine</h1>
+      <!-- <form id="new-task-form">
         <input
           type="text"
           id="new-task-input"
           placeholder="What do you have planned?"
         />
         <input type="submit" id="new-task-submit" value="Add task" />
-      </form>
+      </form> -->
     </header>
     <main>
+      <section id="intro-sec">
+        <div class="intro" id="intro-tasks">
+          <form class="form" id="intro-tasks-form">
+            <p id="intro-tasks-text">
+              What activities do you want to include in your morning routine?
+              Max. 3
+            </p>
+            <label
+              ><input
+                value="Meditate"
+                type="checkbox"
+                readonly
+              />Meditate</label
+            >
+            <label><input value="Read" type="checkbox" readonly />Read</label>
+            <label
+              ><input
+                value="Visualize"
+                type="checkbox"
+                readonly
+              />Visualize</label
+            >
+            <label
+              ><input value="Journal" type="checkbox" readonly />Journal</label
+            >
+            <label
+              ><input value="Say affirmations" type="checkbox" readonly />Say
+              affirmations</label
+            >
+            <label
+              ><input
+                value="Exercise"
+                type="checkbox"
+                readonly
+              />Exercise</label
+            >
+            <label
+              ><input value="Write here" type="checkbox" />Other<input
+                type="text"
+                placeholder="Write here"
+            /></label>
+            <input
+              type="Submit"
+              value="Submit"
+              class="form-submit"
+              id="intro-tasks-form-submit"
+            />
+          </form>
+          <div class="nav-btns" id="intro-tasks-btns">
+            <button class="nav-btn-prev" id="nav-btn-prev"><</button>
+            <button class="nav-btn-next" id="nav-btn-next">></button>
+          </div>
+        </div>
+        <div class="intro" id="intro-duration">
+          <form class="form" id="intro-duration-form">
+            <p id="intro-duration-text">
+              How much time do you want to invest in your morning routine? Max.
+              60 min
+            </p>
+            <label
+              >Choose minutes<input type="number" min="1" max="60"
+            /></label>
+            <input
+              type="Submit"
+              value="Submit"
+              class="form-submit"
+              id="intro-duration-form-submit"
+            />
+          </form>
+          <div class="nav-btns" id="intro-duration-btns">
+            <button class="nav-btn-prev" id="nav-btn-prev"><</button>
+            <button class="nav-btn-next" id="nav-btn-next">></button>
+          </div>
+        </div>
+        <div class="intro" id="intro-time">
+          <form class="form" id="intro-time-form">
+            <p id="intro-duration-text">
+              At what time would you like to start your morning routine?
+            </p>
+            <label
+              >Choose time<input type="time" min="09:00" max="18:00"
+            /></label>
+            <input
+              type="Submit"
+              value="Submit"
+              class="form-submit"
+              id="intro-duration-form-submit"
+            />
+            <p>
+              This is the last question. Make sure you are happy with all your
+              criteria. Once you click "Submit" the program will start.
+            </p>
+          </form>
+          <div class="nav-btns" id="intro-time-btns">
+            <button class="nav-btn-prev" id="nav-btn-prev"><</button>
+            <button class="nav-btn-next" id="nav-btn-next">></button>
+          </div>
+        </div>
+        <div class="intro" id="intro-msg">
+          <form class="form" id="intro-msg-form">
+            <p>
+              Perfect! We'll start tomorrow. In 30 days this routine will feel
+              natural to you.
+            </p>
+            <input
+              type="submit"
+              value="I'll come back tomorrow"
+              class="form-submit"
+              id="intro-msg-form-submit"
+            />
+          </form>
+        </div>
+      </section>
+      <section id="daily-sec">
+        <div class="daily" id="daily-tasks">
+          <form id="daily-tasks-form">
+            <p>Your morning routine is:</p>
+            <ul>
+              <li>Meditate</li>
+              <li>Read</li>
+              <li>Visualize</li>
+            </ul>
+            <input
+              type="submit"
+              value="Done"
+              class="form-submit"
+              id="daily-tasks-form-submit"
+            />
+          </form>
+        </div>
+        <div class="daily" id="daily-msg">
+          <form id="daily-msg-form-subtmit">
+            <p>
+              Perfect! You've done it one more day. Your routine is becoming
+              stronger.
+            </p>
+            <p id="streak">Current streak: <span id="streak-number">0</span></p>
+            <input
+              type="submit"
+              value="I'm happy about this"
+              id="daily-msg-form-submit"
+            />
+          </form>
+        </div>
+      </section>
+      <section id="end-sec">
+        <div class="end" id="end-msg">
+          <form id="end-sec-form">
+            <p>Congratulations! You have a new routine.</p>
+            <p id="streak">Current streak: <span id="streak-number">0</span></p>
+            <p>
+              If your routine is working you can keep going. If not you can
+              <button id="new-routine">try a new one</button>.
+            </p>
+            <button id="end-sec-form-credits">Credits</button>
+            <ul>
+              <li>Leda Rodríguez Posso 2022</li>
+              <li>Thanks mom</li>
+              <li>Thanks tutorials</li>
+            </ul>
+          </form>
+        </div>
+      </section>
+      <!-- <section class="morning-list">
+        <h1 id="morning-title">Morning</h1> -->
+      <!-- <p class="morning-task">Meditar</p>
+        <p class="morning-task">Visualizar</p>
+        <p class="morning-task">Escribir pensamientos</p> -->
+      <!-- <input type="text" class="task" value="Meditar" />
+        <input type="text" class="task" value="Visualizar" />
+        <input type="text" class="task" value="Escribir pensamientos" />
+      </section>
+      <section class="evening-list">
+        <h1 id="evening-title">Evening</h1> -->
+      <!-- <p class="evening-task">Hacer ejercicio</p>
+        <p class="evening-task">Leer</p>
+        <p class="evening-task">Hacer afirmaciones</p> -->
+      <!-- <input type="text" class="task" value="Hacer ejercicio" />
+        <input type="text" class="task" value="Leer" />
+        <input type="text" class="task" value="Hacer afirmaciones" />
+      </section>
       <section class="tasks-list">
         <h2>Task</h2>
-        <div id="tasks">
-          <!-- <div class="task">
+        <div id="tasks"> -->
+      <!-- <div class="task">
             <div class="content">
               <input type="text" class="text" value="My shiny task" readonly />
             </div>
@@ -34,8 +215,8 @@
               <button class="delete">Delete</button>
             </div>
           </div> -->
-        </div>
-      </section>
+      <!-- </div>
+      </section> -->
     </main>
     <script src="main.js"></script>
   </body>
